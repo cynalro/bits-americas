@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function spotify_theme($existing, $type, $theme, $path) {
+  return [
+    'spotify' => [
+      'variables' => ['albums' => NULL],
+    ],
+    'artist' => [
+      'variables' => ['artist' => NULL, 'album'=>NULL],
+    ],
+  ];
+}

@@ -1,0 +1,6 @@
+name: spotify
+description: spotify
+package: Custom
+ 
+type: module
+core: 8.x

@@ -1,0 +1,5 @@
+spotify.homepage:
+  title: 'Spotify'
+  description: 'Listado de ultimos lanzamientos'
+  parent: 'system.admin_config_ui'
+  route_name: 'spotify.content'

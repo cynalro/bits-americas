@@ -1,0 +1,21 @@
+<h1>Listado de nuevos lanzamientos</h1>
+<div class="container user-groups-container">  
+   {% if albums is not empty %}    
+     {% for key, value in albums.albums.items %}
+        <div class="card" style="width: 18rem;">
+          <img src="{{value.images.1.url}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{value.name}}</h5>
+            {% if albums is not empty %} 
+              <p>Artistas:</p>
+              {% for key1, value1 in value.artists %}            
+                <a href="/bits-americas/web/admin/config/spotify/artista/{{value.id}}" class="btn btn-primary">{{value1.name}}</a>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+        <hr>
+        <br>
+     {% endfor %}
+   {% endif %}
+</div>

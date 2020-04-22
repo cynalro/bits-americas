@@ -1,0 +1,32 @@
+<h1>Artista</h1>
+<div class="container user-groups-container">   
+   {% if artist is not empty %} 
+        <div class="card" style="width: 18rem;">
+          <img src="{{artist.images.0.url}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{artist.name}}</h5>            
+            <a href="/bits-americas/web/admin/config/spotify/" class="btn btn-primary">Lanzamientos</a>
+          </div>
+          {% if album is not empty %} 
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>                
+                    <th scope="col">Foto</th>
+                    <th scope="col">Album</th>
+                    <th scope="col">Cancion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>                
+                    <td><img src="{{album.images.2.url}}" class="card-img-top" alt="..."></td>
+                    <td>{{album.name}}</td>
+                    <td>{{album.tracks.items.0.name}}</td>
+                  </tr>              
+                </tbody>
+              </table>
+            </div>
+          {% endif %}
+        </div>        
+   {% endif %}
+</div>
